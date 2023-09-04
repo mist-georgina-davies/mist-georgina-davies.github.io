@@ -1,166 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-<meta name='viewport' content='initial-scale = 1, minimum-scale = 1, maximum-scale = 1'/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="x-ua-compatible" content="IE=10">
-<title></title>
-<style type="text/css">#initialLoading{background:url(assets/htmlimages/loader.gif) no-repeat center center;background-color:#ffffff;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0;z-index:10010;}</style>
+<meta charset="utf-8">
+<title>Lab1: Job Aid</title>
+<link href="css/jobaid.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+</head>
 
-"
-<script>	window.CPYTAPINeeded = true;	window.onYouTubeIframeAPIReady = function(){		window.CPYTAPIReady = true;	};</script>"
+<body>
+<div id="wrapper">
+  
+    <div id="header">
+        <br>
+       <h1> How to Serve a Tennis Ball </h1>    
+       <h2> By  Georgina Davies </h2>  <br>
+    </div>
+    <br>
 
-<script>
+    <div id="step1">
+        <div class="stepTitle"> Step 1: Get Ready to Serve
+        </div>
 
-var deviceReady = false;
-var initCalled = false ;
-var initialized = false;
+        <div class="stepContent">
 
-function onBodyLoad()
-{
-	if(typeof window.device === 'undefined')
-	{
-		document.addEventListener("deviceready", onDeviceReady, false);
-	}
-	else
-	{
-		onDeviceReady();
-	}
-}
-function isLivePreview()
-{
-	return  ( window.location.pathname.indexOf("\/livepreview") === 0 );
-}
+            <div class="stepDescription">
+                <p> Stand behind the baseline, facing the net. If you're playing singles, stand closer to the middle of the court. For doubles, stand a bit to the side. Point your left foot toward the net post on the opposite side. Your right foot should be parallel to the court. Remember, if you're left-handed, use the opposite hands and feet.</p>
+            </div>
 
-function onDeviceReady()
-{
-	deviceReady = true ;
-	if(initCalled === true)
-		initializeCP();
-}
+            <div class="stepImage">
+                <img src="img/step1.png" alt="Person setting up to serve">
+                <br>
+                <figcaption>Photo by Florian Doppler from Pexels: https://www.pexels.com/photo/man-in-red-t-shirt-and-black-shorts-playing-tennis-3818834/</figcaption>
+            </div>
 
-function isLivePreviewDirty()
-{
-	var reqUrl = window.location.protocol + "//" + window.location.host + "/livepreview/isLivePreviewDirty?folder=" + cp.previewFolder;
-	var request = new XMLHttpRequest();
-	request.open('GET', reqUrl);
-	request.responseType = 'text';
-	request.onload = function()
-	{
-  		var response = JSON.parse(request.response);
-		  if(response.isDirty == false)
-		  {
-			return;
-		  }
-  		window.location.href = window.location.protocol + "//" + window.location.host + "/livepreview/" + response.folder + "/index.html";
-	};
-	request.send();
-}
+        </div><!--stepContent-->
+    </div><!--step1-->
+        
+    <br>
+    
+    <div id="step2">
 
-function initializeCP()
-{
-	if(initialized)
-		return;
-	initCalled = true ;
-	if(cp.pg && deviceReady === false)
-		return;
+        <div class="stepTitle"> Step 2: Hold the Ball and Racquet Correctly
+        </div>
 
-	function cpInit()
-	{
-		document.body.innerHTML = " <div class='cpMainContainer' id='cpDocument' style='left: 0px; top:0px;' >	<div id='main_container' style='top:0px;position:absolute;'>	<div id='projectBorder' style='top:0px;left:0px;position:absolute;display:block'></div>	<div class='shadow' id='project_container' style='left: 0px; top:0px;position:absolute;' >	<div id='project' class='cp-movie' style='width:1024px ;height:627px '>		<div id='project_main' class='cp-timeline cp-main'>			<div id='div_Slide' onclick='cp.handleClick(event)' style='top:0px; width:1024px ;height:627px ;position:absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);'></div>			<canvas id='slide_transition_canvas'></canvas>		</div>		<div id='autoplayDiv' style='display:block;text-align:center;position:absolute;left:0px;top:0px;'>			<img id='autoplayImage' src='' style='position:absolute;display:block;vertical-align:middle;'/>			<div id='playImage' tabindex='9999' role='button' aria-label='play' onkeydown='cp.CPPlayButtonHandle(event)' onClick='cp.movie.play()' style='position:absolute;display:block;vertical-align:middle;'></div>		</div>		<div id='cc' style='left:0px; float:left;position:absolute;visibility:hidden;pointer-events:none;' onclick='cp.handleCCClick(event)'>			<div id='ccText' style='left:0px;float:left;position:absolute;width:100%;height:100%;'>			<p style='margin-left:8px;margin-right:8px;margin-top:2px;'>			</p>			</div>			<div id='ccClose' style='background-image:url(./assets/htmlimages/ccClose.png);right:0px; float:right;position:absolute;cursor:pointer;width:13px;height:11px;' onclick='cp.showHideCC()'>			</div>		</div>	</div>	<div id='toc' style='left:0px; float:left;position:absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);'>	</div>	<div id='playbar' style='left:0px; float:left;position:absolute'>	</div>	<div id='gestureIcon' class='gestureIcon'>	</div>	<div id='gestureHint' class='gestureHintDiv'>		<div id='gImage' class='gesturesHint'></div>	</div>	<div id='pwdv' style='display:block;text-align:center;position:absolute;width:100%;height:100%;left:0px;top:0px'></div>	<div id='exdv' style='display:block;text-align:center;position:absolute;width:100%;height:100%;left:0px;top:0px'></div>	</div>	</div></div><div id='blockUserInteraction' class='blocker' style='width:100%;height:100%;'>	<table style='width:100%;height:100%;text-align:center;vertical-align:middle' id='loading' class='loadingBackground'>		<tr style='width:100%;height:100%;text-align:center;vertical-align:middle'>			<td style='width:100%;height:100%;text-align:center;vertical-align:middle'>				<image id='preloaderImage'></image>				<div id='loadingString' class='loadingString'>Loading...</div>			</td>		</tr>	</table></div> <div id='initialLoading'></div>";
-		cp.DoCPInit();
-		var lCpExit = window["DoCPExit"];
-		window["DoCPExit"] = function()
-		{
-			if(cp.UnloadActivties)
-				cp.UnloadActivties();
-			lCpExit();
-		};
+        <div class="stepContent">
 
-		if( window.CPYTAPINeeded )
-		{
-		  var tag = document.createElement('script');
-		  tag.src = "https://www.youtube.com/iframe_api";
-		  document.getElementsByTagName('head')[0].appendChild(tag);
-		}
+            <div class="stepDescription">
+                <p>Hold the tennis ball in your left hand and your racquet in your right hand. Place your left hand so that the ball is close to the throat of the racket. Hold the racket like you are shaking hands. Don't hold the racket too tight, keep your grip relaxeded, like a 4 out of 10, for a more powerful serve.</p>
+            </div>
 
-		if( window.CPVimeoAPINeeded )
-		{
-		  var tag = document.createElement('script');
-		  tag.src = "https://player.vimeo.com/api/player.js";
-		  document.getElementsByTagName('head')[0].appendChild(tag);
-		}		
-	}
+            <div class="stepImage">
+                <img src="img/step2.png" alt="Tennis ball held next to racket">
+                <br>
+                <figcaption>Photo by Gonzalo Facello from Pexels: https://www.pexels.com/photo/close-up-photo-of-person-holding-tennis-racket-and-ball-1432039/</figcaption>
+            </div>
+
+        </div><!--stepContent-->
+
+    </div><!--step2-->
 	
-	cpInit();
-	initialized = true;
-	if(isLivePreview() === true)
-	{	
-		cp.previewFolder = window.location.href.split("\/")[4];
-		setInterval(isLivePreviewDirty, 1000);
-	}
-}
+	<br>
+    
+    <div id="step3">
 
-</script>
+        <div class="stepTitle"> Step 3: Toss The Ball 
+        </div>
 
- </head>
-<body onload="onBodyLoad()">
-		<div id='initialLoading'></div>
-<script>
-		(function()
-		{
-			if(document.documentMode < 9)
-			{
-				document.body.innerHTML = "";
-				document.write("The content you are trying to view is not supported in the current Document Mode of Internet Explorer. Change the Document Mode to Internet Explorer 9 Standards and try to view the content again.<br>To change the Document Mode, press F12, click Document Mode: <current mode>, and then select Internet Explorer 9 Standards.");
-				return;
-			}
-			window.addEventListener("load",function() 
-			{
-				setTimeout(function() 
-				{					
-					var script = document.createElement('script');
-					script.type = 'text/javascript';
-					script.src = 'assets/js/CPXHRLoader.js';
-					script.defer = 'defer';
-					script.onload = function()
-					{
-						var lCSSLoaded = false;
-						var lJSLoaded = false;
-						function constructDIVs()
-						{
-							if(lCSSLoaded && lJSLoaded)
-							{
-								initializeCP();
-							}
-						}
-						cpXHRJSLoader.css('assets/css/CPLibraryAll.css',function() {
-							lCSSLoaded = true;
-							constructDIVs();
-						});
-						var lJSFiles = [  'assets/js/jquery-3.3.1.min.js','assets/js/CPM.js','assets/playbar/playbarScript.js' ];
-						cpXHRJSLoader.js(lJSFiles,function()
-						{
-							//console.log("js loaded");
+        <div class="stepContent">
 
-							var imagesJSONFiles = [ 'dr/imgmd.json' ];
-							cpXHRJSLoader.loadImagesJSON(imagesJSONFiles,function(imageToJSONPathMap){
-								cp.imageToJSONPathMap = imageToJSONPathMap;
-								var imageJSONFiles = [ 'dr/img1.json','dr/img2.json','dr/img3.json','dr/img4.json','dr/img5.json','dr/img6.json','dr/img7.json','dr/img8.json','dr/img9.json' ];
-								if(window.location.protocol.substr(0,4) == "file")
-									cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
-								lJSLoaded = true;
-								if(window.location.protocol.substr(0,4) != "file" || !imageJSONFiles.length)
-									constructDIVs();
-							});
-						});
-					}
-					document.getElementsByTagName('head')[0].appendChild(script);
-				},1);
-			},false);
-		})();
-		
-</script>
-<noscript style="text-align:center;font-size:24px;">Enable Javascript support in the browser.</noscript>
+            <div class="stepDescription">
+                <p> Now it's time to toss the tennis ball into the air. Use your hand that's not holding the racket to gently throw the ball upwards. As you do this, drop your other arm and separate them both. Try to toss the ball just above your hitting hand's highest point. This helps you hit the ball in the right place for a good serve. Remember, don't toss the ball too high or too low. And make sure to shift your weight slightly forward as you toss. If you shift it backward, you might toss the ball behind you. It's like a little dance move that helps you serve better!</p>
+                <p>Many people struggle with the ball toss and placement. Here are 5 additional tips to improve your tennis ball toss:</p>
+                <ol>
+                    <li>Practice tossing the ball to the same spot every time to establish a reliable starting point.</li>
+                    <li>Toss the ball just above your hitting hand's highest point for comfortable and effective contact.</li>
+                    <li>Use your non-dominant hand to guide the toss, ensuring control and accuracy.</li>
+                    <li>Toss the ball smoothly and parallel to the net, avoiding jerky movements.</li>
+                    <li>Shift your weight slightly forward as you toss to set up a balanced stance for your serve.</li>
+                </ol>
+            </div>
+
+            <div class="stepImage">
+                <img src="img/step3.png" alt="Tossing Tennis Ball for Serve">
+                <br>
+                <figcaption>Photo by Milo Deckert from Pexels: https://www.pexels.com/photo/player-on-the-tennis-court-18016924/</figcaption>
+            </div>
+
+        </div><!--stepContent-->
+    </div><!--step3-->
+    
+    <br>
+	
+    <div id="step4">    
+        <div class="stepTitle"> Step 4: Racket Back, Ball Up
+        </div>
+
+        <div class="stepContent">
+
+            <div class="stepDescription">
+                <p> Bring the racket head above you and bend your elbow, like you're scratching your back with the racket's side. Don't forget to bend your knees too, as this helps your racket go up. This move gives the ball more power. With practice, this will become one smooth motion — tossing the ball up with one hand while using the racket to scratch your back with the other. You can practice this move as much as you want before actually hitting the ball (just not during a game, or you might test your opponent's patience). Some beginners lift the racket behind their back before tossing the ball. This might make it easier to hit the ball, but you'll have less power and momentum. As you let go of the ball you're tossing, put most of your weight on your back leg, loading your back knee. This way, when you make contact, you can spring forward using your back leg's energy.</p>
+            </div>
+
+            <div class="stepImage">
+                <img src="img/step4.png" alt="Tennis Racket is back scratch position">
+                <br>
+                <figcaption>Photo by Florian Doppler from Pexels: https://www.pexels.com/photo/photo-of-man-playing-tennis-3818832/</figcaption>
+            </div>
+
+        </div><!--stepContent-->
+    </div><!--step4-->
+
+    <br>
+	
+<div id="step5">
+        <div class="stepTitle"> Step 5: Hit The Ball 
+        </div>
+
+        <div class="stepContent">
+            <div class="stepDescription">
+                <p> When the ball is at the right height, use the side of your racket to hit it. Aim to hit the ball in the center of the racket's strings. Your goal is to hit the ball with a smooth and controlled motion. As you hit the ball, shift your weight from your back foot to your front foot and follow through with your swing. This will help you send the ball over the net and into the opponent's side of the court.</p>
+                <p>Remember, practicing these steps and staying patient will help you improve your serve over time. It's all about getting the rhythm and technique right. With practice, your serves will become more accurate and powerful!</p>
+                <p><a href="https://www.youtube.com/watch?v=A-Hcgjz1uow" target="_blank"> Watch tennis pros serve in slow-motion</a></p>
+            </div>
+
+            <div class="stepImage">
+                <img src="img/step5.png" alt="Hitting the Tennis Ball">
+				<br>
+				 <figcaption>Photo by Milo Deckert from Pexels: https://www.pexels.com/photo/player-on-the-tennis-court-18016924/</figcaption>
+            </div>
+        </div><!--stepContent-->
+    </div><!--step5-->
+	
+	
+</div><!--wrapper-->
+
 </body>
 </html>
+

@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+a {
+	padding: 1px;
+margin: 1px;
+	font-size: 100%;
+	background-color:  darkseagreen; 
+	color:  black; 
+}
+a:hover {
+	font-size:200%;
+	background-color: lightpink; 
+	color: darkslategray; 
+}
+* {
+    font-family: 'Calibri', sans-serif;
+}
+body {
+	color: #000000;          /* text color for the entire document */
+	font-size: 12px;
+	font-family:Verdana, Geneva, sans-serif;
+	text-align: center;  
+	background-image: url("../img/mountain.jpg");
+	background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+
+#wrapper {
+	width:900px;
+	margin:0 auto;         /* centers wrapper */
+ 	text-align:center;
+	background-color: rgba(255, 255, 255, 0.8);  /* creates white background with 80% opacity */
+}
+
+table {
+	margin:0 auto;  /* centers table*/
+}
+
+td {
+	background-color: white;  /* sets background color for table cells*/
+}
+
+h1, h2 { 
+	text-align:center;     /* centers h1 and h2 content */
+}
+
+h2 {
+	font-size: 24px
+		
+}
+audio { 
+	width:200px;   /* sets the width of the audio controls */
+	}
+
+img {
+    width: 300px;
+    height: auto;
+}

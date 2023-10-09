@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background-color: #DDFD65;   /* background color */
+    color: #444;          /* text color for the entire page */
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto; /* This will horizontally center the image if it has a set width */
+}
+
+h1, h2, h3, h4 { 
+    text-align: center;  
+    color: #000636; /* centers h1 and h2 content */
+}
+
+h4 {
+	font-size: 15px;
+}
+ul {
+    display: inline-block; /* makes the ul only as wide as its content */
+    text-align: left; /* aligns the text of the list items to the left */
+    padding-left: 0; /* removes default padding */
+    list-style-position: inside; /* this brings the bullet inside of the ul content box */
+}
+
+body {
+    text-align: center; /* centers the inline-block ul */
+}
+#wrapper {
+    width: 85%;
+    margin: 0 auto; /* This should horizontally center your wrapper */
+}
+
+#feedback {
+    background: lightyellow; /* background color */
+    padding: 20px; 
+    font-size: 125%;
+}

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+	background-color: paleturquoise;  
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	padding: 15px;
+	margin: 3px;
+	font-size: 125%;
+	background-color: darkseagreen; 
+	color: black; 
+}
+.warning {
+	background-color: #FBB8C4;
+	padding:10px;
+	border-radius:20px;
+}
+.stepTitle{
+	padding:10px;
+	text-align:left;
+	background-color:darkseagreen;
+	color:black;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+.stepContent{ 
+	background-color: paleturquoise;
+	padding:7px;
+	font-size: 100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+.stepDescription {
+	width:55%;
+	padding:5px;
+	line-height:145%;
+}
+
+.stepImage {
+	width:40%;	
+	padding:5px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 gray, 0 6px 20 px 0 gray;
+}
+
+.stepImage img {
+	width:50%;
+	height:auto;
+}
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.equipment-image, .answer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+ul {
+	align-content: center;
+}
+
+
+h2 {
+    font-size: 150%;
+}
+.intro-image {
+    max-width: 50%; 
+    height: auto;
+}
+#wrapper {
+    position: relative;
+}
+
+#tennisequipment, #tennisadditional {
+    display: block;
+    margin: 20px auto;
+}
+#tennisequipment-container, #tennisadditional-container {
+    position: relative;
+}
+
+#tennisequipment {
+    margin: 20px 50px 20px 5px;
+}
+
+
+.answer {
+    display: none;
+    position: absolute;
+    padding-right: 20px;
+    text-align: left;
+    left: 10px;
+    width: 280px;
+    top: 0;
+}
+
+a:hover {
+	font-size: 200%;
+	background-color: lightpink; 
+	color: black; 
+}
+
+
+details {
+    background-color: paleturquoise;
+    margin-bottom: 20px;
+	color: black;
+}
+
+details summary:hover {
+	background-color: lightpink;
+	color: black;
+}
+
+details[open] summary {
+	background-color: lightpink;
+	color: black;
+}
+.source-link {
+    padding: 5px;
+    background-color: darkseagreen; 
+    color: black; 
+}
+strong {
+	font-weight: 800;
+}
+figcaption {
+	font-size: 100%
+	
+}
+

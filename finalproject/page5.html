@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Equipment Guide</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../lab3/css/lab3.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#tennisequipment, #tennisadditional").mouseenter(function () {
+                var itemId = $(this).attr('id');
+                $(this).hide();
+                if (itemId === 'tennisequipment') {
+                    $("#answer-tennis").html("<h2>Tennis Equipment Recommendations</h2>" +
+                        "<h6><strong>1. Racket:</strong> Choosing the right tennis racket is crucial, especially focusing on the size, weight, and grip.<br><em>Beginner Recommendation:</em> The Wilson Hyper Hammer 5.3 Strung Tennis Racket.</h6>" +
+                        "<h6><strong>2. Tennis Balls:</strong> Tennis balls should be of good quality to maintain consistent bounce and durability.<br><em>Recommendation:</em> Wilson Championship Extra Duty Tennis Balls.</h6>" +
+                        "<h6><strong>3. Tennis Shoes:</strong> Proper tennis shoes are essential to provide adequate support and handle the quick lateral movements of the sport.<br><em>Recommendation:</em> Nike Court Lite 2.</h6>"
+                    ).show();
+                } else {
+                    $("#answer-additional").html("<h2>Optional Other Equipment</h2>" +
+                        "<h6><strong>5. Grips:</strong> Overgrips or replacement grips are essential for maintaining a solid hold on your racket, absorbing sweat, and providing cushioning.<br><em>Beginner Recommendation:</em> Wilson Pro Overgrip.</h6>" +
+                        "<h6><strong>6. Bag:</strong> A tennis bag is designed to carry all of your equipment and usually comes with compartments for rackets, balls, water bottles, and personal items.<br><em>Beginner Recommendation:</em> Babolat Club Line Tennis Backpack.</h6>" +
+                        "<h6><strong>7. String:</strong> The racket string plays a pivotal role in how the racket performs. It's available in different materials and tensions which can influence power, control, and comfort.<br><em>Beginner Recommendation:</em> Head Synthetic Gut PPS.</h6>"
+                    ).show();
+                }
+            });
+
+            $("#tennisequipment, #tennisadditional").mouseleave(function () {
+                $(".answer").hide();
+                $(this).show();
+            });
+
+            $(".answer").mouseleave(function () {
+                $(this).hide();
+                $("#tennisequipment, #tennisadditional").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+	 <div id="header">
+	<br>
+	<a href="index.html">Home </a>
+	<a href="../finalproject/page1.html">  How to Serve </a>
+	<a href="../finalproject/page2.html"> Understanding the Court </a>
+	<a href="../finalproject/page3.html"> Basics of Tennis Scoring </a>
+	
+	<br> 
+	<br>
+	<br>
+	<a href="../finalproject/page5.html"> Equipment Guide </a>
+	<a href="../finalproject/page6.html"> Interactive Quiz </a>
+    <div id="wrapper">
+        <!-- Your header and links here... -->
+        <h1>What equipment do you need to play tennis?</h1>
+		<h2> Hover over each of the images to learn more. </h2>
+
+        <div class="image-container" id="tennisequipment-container">
+            <img class="equipment-image" id="tennisequipment" src="img/equipment.jpg" alt="Tennis Equipment" />
+            <div class="answer" id="answer-tennis"></div>
+        </div>
+        <div class="image-container" id="tennisadditional-container">
+            <img class="equipment-image" id="tennisadditional" src="img/additional.jpg" alt="Additional Tennis Items" />
+            <div class="answer" id="answer-additional"></div>
+        </div>
+    </div>
+		 
+ <h4>Image Courtesy of Julia Kuzenkov, Pexels </h4>
+<h4>Image Courtesy of Gaspar Zaldo, Pexels </h4>
+</body>
+
+</html>

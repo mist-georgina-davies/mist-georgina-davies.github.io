@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="../lab3/css/lab3.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link href="css/lab3.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+<title>Page 4</title>
+</head>
+
+<body>
+	<div id="wrapper">
+  
+   <br>
+	<a href="index.html">Home </a>
+	<a href="../finalproject/page1.html">  How to Serve </a>
+	<a href="../finalproject/page2.html"> Understanding the Court </a>
+	<a href="../finalproject/page3.html"> Basics of Tennis Scoring </a>
+	
+	<br> 
+	<br>
+	<br>
+	<a href="../finalproject/page5.html"> Equipment Guide </a>
+	<a href="../finalproject/page6.html"> Interactive Quiz </a>
+		
+    <header>
+        <h1>Quiz</h1>
+    </header>
+ <form id="quizForm">
+        <div class="quiz-question" id="question1">
+            <h3>1. What is crucial to consider when choosing a tennis racket?</h3>
+            <input type="radio" name="q1" value="a"> Color<br>
+            <input type="radio" name="q1" value="b"> Brand<br>
+            <input type="radio" name="q1" value="c"> Size and Grip<br>
+            <input type="radio" name="q1" value="d"> Price<br>
+        </div>
+
+        <div class="quiz-question" id="question2">
+            <h3>2. What is the scoring sequence in a game of tennis?</h3>
+            <input type="radio" name="q2" value="a"> 0, 15, 30, 40<br>
+            <input type="radio" name="q2" value="b"> 1, 2, 3, 4<br>
+            <input type="radio" name="q2" value="c"> 5, 10, 15, 20<br>
+            <input type="radio" name="q2" value="d"> 10, 20, 30, 40<br>
+        </div>
+        
+   <div class="quiz-question" id="question3">
+            <h3>3. Which line signifies the end of the court in a singles match?</h3>
+            <input type="radio" name="q3" value="a"> Service line<br>
+            <input type="radio" name="q3" value="b"> Baseline<br>
+            <input type="radio" name="q3" value="c"> Doubles sideline<br>
+            <input type="radio" name="q3" value="d"> Center line<br>
+        </div>
+
+        <div class="quiz-question" id="question4">
+            <h3>4. What is a "fault" in tennis serving?</h3>
+            <input type="radio" name="q4" value="a"> Hitting the net and landing in the correct service box<br>
+            <input type="radio" name="q4" value="b"> Serving from behind the baseline<br>
+            <input type="radio" name="q4" value="c"> Hitting the ball outside the opponent’s service box<br>
+            <input type="radio" name="q4" value="d"> Both a and c<br>
+        </div>
+
+        <div class="quiz-question" id="question5">
+            <h3>5. The "T" in a tennis court refers to the:</h3>
+            <input type="radio" name="q5" value="a"> Point where the center line meets the service line<br>
+            <input type="radio" name="q5" value="b"> Top of the net<br>
+            <input type="radio" name="q5" value="c"> Tail end of the baseline<br>
+            <input type="radio" name="q5" value="d"> Termination of the doubles sideline<br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit</button>
+</form>
+    <p id="result"></p>
+
+<script src="quiz.js"></script>
+</body>
+</html>

@@ -12,35 +12,60 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#tennisequipment, #tennisadditional").mouseenter(function () {
-                var itemId = $(this).attr('id');
-                $(this).hide();
-                if (itemId === 'tennisequipment') {
-                    $("#answer-tennis").html("<h2>Tennis Equipment Recommendations</h2>" +
-                        "<h6><strong>1. Racket:</strong> Choosing the right tennis racket is crucial, especially focusing on the size, weight, and grip.<br><em>Beginner Recommendation:</em> The Wilson Hyper Hammer 5.3 Strung Tennis Racket.</h6>" +
-                        "<h6><strong>2. Tennis Balls:</strong> Tennis balls should be of good quality to maintain consistent bounce and durability.<br><em>Recommendation:</em> Wilson Championship Extra Duty Tennis Balls.</h6>" +
-                        "<h6><strong>3. Tennis Shoes:</strong> Proper tennis shoes are essential to provide adequate support and handle the quick lateral movements of the sport.<br><em>Recommendation:</em> Nike Court Lite 2.</h6>"
-                    ).show();
-                } else {
-                    $("#answer-additional").html("<h2>Optional Other Equipment</h2>" +
-                        "<h6><strong>5. Grips:</strong> Overgrips or replacement grips are essential for maintaining a solid hold on your racket, absorbing sweat, and providing cushioning.<br><em>Beginner Recommendation:</em> Wilson Pro Overgrip.</h6>" +
-                        "<h6><strong>6. Bag:</strong> A tennis bag is designed to carry all of your equipment and usually comes with compartments for rackets, balls, water bottles, and personal items.<br><em>Beginner Recommendation:</em> Babolat Club Line Tennis Backpack.</h6>" +
-                        "<h6><strong>7. String:</strong> The racket string plays a pivotal role in how the racket performs. It's available in different materials and tensions which can influence power, control, and comfort.<br><em>Beginner Recommendation:</em> Head Synthetic Gut PPS.</h6>"
-                    ).show();
-                }
-            });
+   $(document).ready(function () {
+    var hideTimer, showTimer;
 
-            $("#tennisequipment, #tennisadditional").mouseleave(function () {
-                $(".answer").hide();
-                $(this).show();
-            });
+    function showTennisDetails(itemId) {
+        if (itemId === 'tennisequipment') {
+            $("#answer-tennis").html("<h2>Tennis Equipment Recommendations</h2>" +
+                "<h6><strong>1. Racket:</strong> Choosing the right tennis racket is crucial, especially focusing on the size, weight, and grip.<br><em>Beginner Recommendation:</em> The Wilson Hyper Hammer 5.3 Strung Tennis Racket.</h6>" +
+                "<h6><strong>2. Tennis Balls:</strong> Tennis balls should be of good quality to maintain consistent bounce and durability.<br><em>Recommendation:</em> Wilson Championship Extra Duty Tennis Balls.</h6>" +
+                "<h6><strong>3. Tennis Shoes:</strong> Proper tennis shoes are essential to provide adequate support and handle the quick lateral movements of the sport.<br><em>Recommendation:</em> Nike Court Lite 2.</h6>"
+            ).show();
+        } else {
+            $("#answer-additional").html("<h2>Optional Other Equipment</h2>" +
+                "<h6><strong>5. Grips:</strong> Overgrips or replacement grips are essential for maintaining a solid hold on your racket, absorbing sweat, and providing cushioning.<br><em>Beginner Recommendation:</em> Wilson Pro Overgrip.</h6>" +
+                "<h6><strong>6. Bag:</strong> A tennis bag is designed to carry all of your equipment and usually comes with compartments for rackets, balls, water bottles, and personal items.<br><em>Beginner Recommendation:</em> Babolat Club Line Tennis Backpack.</h6>" +
+                "<h6><strong>7. String:</strong> The racket string plays a pivotal role in how the racket performs. It's available in different materials and tensions which can influence power, control, and comfort.<br><em>Beginner Recommendation:</em> Head Synthetic Gut PPS.</h6>"
+            ).show();
+        }
+    }
 
-            $(".answer").mouseleave(function () {
-                $(this).hide();
-                $("#tennisequipment, #tennisadditional").show();
-            });
-        });
+    $("#tennisequipment, #tennisadditional").mouseenter(function () {
+        clearTimeout(hideTimer);
+        clearTimeout(showTimer);
+        
+        var itemId = $(this).attr('id');
+        var that = $(this);
+        
+        showTimer = setTimeout(function(){
+            that.hide();
+            showTennisDetails(itemId);
+        }, 200); // Delay showing the details slightly
+    });
+
+    $("#tennisequipment, #tennisadditional").mouseleave(function () {
+        clearTimeout(hideTimer);
+        clearTimeout(showTimer);
+        
+        var that = $(this);
+        
+        hideTimer = setTimeout(function() {
+            $(".answer").hide();
+            that.show();
+        }, 500); // Delay before showing the image again
+    });
+
+    $(".answer").mouseenter(function () {
+        clearTimeout(hideTimer); // If you enter the answer area, don't hide it
+    });
+
+    $(".answer").mouseleave(function () {
+        $(this).hide();
+        $("#tennisequipment, #tennisadditional").show();
+    });
+});
+
     </script>
 </head>
 

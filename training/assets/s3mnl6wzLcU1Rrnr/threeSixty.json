@@ -1,0 +1,57 @@
+{
+  "version": "3.80.31058.0",
+  "course_id": "5wFHnwioORK",
+  "title": "Tiered Consequences",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Main Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "65UIagJRDHY",
+      "title": "Welcome Slide ",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "6h8YVXGPZZh",
+      "title": "Tier1Overview",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "5j23kO0x0GH",
+      "title": "Tier1",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "6PWos8OR01c",
+      "title": "Tier2",
+      "scene_index": "1.4"
+    },
+    {
+      "id": "6RnqIdWv8AN",
+      "title": "Tier3",
+      "scene_index": "1.5"
+    },
+    {
+      "id": "5lej1hzP2h3",
+      "title": "Tier2Overview",
+      "scene_index": "1.6"
+    },
+    {
+      "id": "5YszTbPyQfA",
+      "title": "Tier3Overview",
+      "scene_index": "1.7"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 634
+  },
+  "stage": {
+    "width": 960,
+    "height": 540
+  }
+}

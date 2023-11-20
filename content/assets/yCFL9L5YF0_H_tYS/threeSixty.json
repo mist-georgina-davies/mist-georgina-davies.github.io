@@ -1,0 +1,70 @@
+{
+  "version": "3.80.31058.0",
+  "course_id": "62FIzqi9fuM",
+  "title": "Tiered Restorative Practices",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Main Scene"
+    },
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "5xqWeUcYTvV",
+      "title": "Introduction",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "5g7FGPKjHql",
+      "title": "Tier1Overview",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "5tc5He5x4JN",
+      "title": "Welcome Slide ",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "6jZKVQmRXXL",
+      "title": "Tier1",
+      "scene_index": "1.4"
+    },
+    {
+      "id": "6ejh5H0lKxc",
+      "title": "Tier2",
+      "scene_index": "1.5"
+    },
+    {
+      "id": "5hD4RNDbVPb",
+      "title": "Tier3",
+      "scene_index": "1.6"
+    },
+    {
+      "id": "5l6XCFgX4uM",
+      "title": "Tier2Overview",
+      "scene_index": "1.7"
+    },
+    {
+      "id": "5YBRZe3ztr9",
+      "title": "Tier3Overview",
+      "scene_index": "1.8"
+    },
+    {
+      "id": "6RRt2vxj9rx",
+      "title": "END",
+      "scene_index": "1.9"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 634
+  },
+  "stage": {
+    "width": 960,
+    "height": 540
+  }
+}

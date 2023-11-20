@@ -1,0 +1,27 @@
+{
+  "version": "3.80.31058.0",
+  "course_id": "5wb2BJj3d0w",
+  "title": "A student is frequently late for class. You are concerned about the content they are missing. \rMatch the statements on the right to the correct part of the impact statement",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Title"
+    }
+  ],
+  "slides": [
+    {
+      "id": "6rpBB0z8jry",
+      "title": "A student is frequently late for class. You are concerned about the content they are missing. \rMatch the statements on the right to the correct part of the impact statement",
+      "scene_index": "1.1"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 611
+  },
+  "stage": {
+    "width": 960,
+    "height": 540
+  }
+}
